@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
         extend: {},
+        fontFamily: {
+            body: ["Noto Sans KR",]
+        },
         fontSize: {
             xs: [
                 "12px", {
