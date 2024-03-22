@@ -11,6 +11,10 @@ const meta = {
     },
     tags: ["autodocs"],
     argTypes: {
+        id: {
+            control: "text",
+            description: "input id",
+        },
         errorMessage: {
             control: "text",
             description: "error message",
@@ -57,6 +61,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
+        id: "input",
         iconAlt: "icon",
         iconPath: "https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg",
         placeholder: "텍스트를 입력해주세요",

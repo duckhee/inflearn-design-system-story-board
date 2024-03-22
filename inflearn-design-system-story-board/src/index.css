@@ -5,3 +5,20 @@
 body {
     font-family: "Noto Sans KR";
 }
+
+/*
+ * react 에서 불필요하게 태그가 있으므로써 더 확인하게 되는 문제가 생긴다. -> Reconciliation 이 발생한다.
+ * css 에서 줄이기 위한 방법
+ */
+.relative {
+    > p {
+        position: absolute;
+    }
+}
+
+/** tailwind style */
+@layer components {
+    .text-field > p {
+        @apply absolute;
+    }
+}
