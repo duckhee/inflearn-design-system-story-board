@@ -21,4 +21,9 @@ body {
     .text-field > p {
         @apply absolute;
     }
+
+    /** navigation-title-wrapper 안에 button 이 있을 경우에 대한 스타일 */
+    .navigation-title-wrapper > button {
+        @apply mr-[7px];
+    }
 }
