@@ -9,6 +9,10 @@ export default {
         fontFamily: {
             body: ["Noto Sans KR",]
         },
+        /** border-radius setting */
+        borderRadius: {
+            "primary-button": 5,
+        },
         fontSize: {
             xs: [
                 "12px", {
