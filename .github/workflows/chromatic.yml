@@ -7,6 +7,8 @@ on: push
 jobs:
   chromatic:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./website
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,7 +25,7 @@ jobs:
 
       - name: Run Chromatic
         uses: chromaui/action@latest
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
