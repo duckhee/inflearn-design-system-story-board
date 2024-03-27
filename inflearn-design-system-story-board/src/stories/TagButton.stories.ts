@@ -4,7 +4,7 @@ import TagButton from "../components/TagButton.tsx";
 import {fn} from "@storybook/test";
 
 const meta = {
-    title: "Buttons/IconButton",
+    title: "Buttons/TagButton",
     component: TagButton,
     tags: ["autodocs"],
     parameters: {
@@ -39,4 +39,4 @@ export const Default: Story = {
         isChecked: false,
         onClick: fn()
     }
-}
+};
