@@ -11,7 +11,8 @@ export default {
         },
         /** border-radius setting */
         borderRadius: {
-            "primary-button": 5,
+            // "primary-button": "5px",
+            "button-default": "5px",
             "tag-button": "17.5px",
         },
         fontSize: {
@@ -57,7 +58,7 @@ export default {
             mono300: "#D6D7D9",
             error: "#D01E1E",
             social: "#395997",
-            "darkOpacity":"rgba(255, 255, 255, 0.1)"
+            "darkOpacity": "rgba(255, 255, 255, 0.1)"
         },
     },
     plugins: [],

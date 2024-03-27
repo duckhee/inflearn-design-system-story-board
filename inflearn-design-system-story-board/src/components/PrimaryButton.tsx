@@ -33,7 +33,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
                                                                 onClick,
                                                             }) => {
     return (
-        <button className={`w-full h-[59px] rounded-primary-button ${disabledStyle} ${color[theme]} `}
+        <button className={`w-full h-[59px] rounded-button-default ${disabledStyle} ${color[theme]} `}
                 disabled={isDisabled}
                 onClick={onClick}>{children}</button>
     );
