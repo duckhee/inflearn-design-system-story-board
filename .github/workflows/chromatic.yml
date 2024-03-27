@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: ./inflearn-design-system-story-board
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,16 +17,14 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
+        working-directory: ${{ env.working-directory }}
         # ⚠️ Pick one of these, matching the package manager for your project
-        run: |
-          cd inflearn-design-system-story-board
-          npm ci
+        run: npm ci
       #        run: pnpm install
       #        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Run Chromatic
         uses: chromaui/action@latest
-        working-directory: ${{ env.working-directory }}
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
