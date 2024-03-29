@@ -11,6 +11,8 @@ const config: StorybookConfig = {
         "@storybook/addon-mdx-gfm",
         "@storybook/addon-a11y", // 👈 Register the addon
         '@storybook/addon-interactions', // 👈 Register the addon
+        '@storybook/addon-coverage', //👈 Registers the addon
+
 
     ],
     framework: {

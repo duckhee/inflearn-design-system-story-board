@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "chromatic:dev": "npx chromatic --project-token=chpt_1e2052cf67aaf18",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "test-coverage": "test-storybook -- --coverage"
   },
   "dependencies": {
     "@fontsource/noto-sans-kr": "^5.0.18",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.23",
     "@storybook/addon-a11y": "^8.0.5",
+    "@storybook/addon-coverage": "^1.0.1",
     "@storybook/addon-essentials": "^8.0.4",
     "@storybook/addon-interactions": "^8.0.5",
     "@storybook/addon-links": "^8.0.4",
