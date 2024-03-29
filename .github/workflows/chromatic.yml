@@ -13,19 +13,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          workingDir: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
       - uses: actions/setup-node@v3
         with:
-          workingDir: inflearn-design-system-story-board
+          workingDir: ${{ env.working-directory }}
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: yarn
       - name: Install Playwright
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: npx playwright install --with-deps
       - name: Build Storybook
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: yarn build-storybook --quiet
       - name: Serve Storybook and run tests
         working-directory: ${{ env.working-directory }}

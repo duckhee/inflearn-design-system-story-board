@@ -4,25 +4,27 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./inflearn-design-system-story-board
     steps:
       - uses: actions/checkout@v3
         with:
-          workingDir: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
       - uses: actions/setup-node@v3
         with:
-          workingDir: inflearn-design-system-story-board
+          workingDir: ${{ env.working-directory }}
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: yarn
       - name: Install Playwright
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: npx playwright install --with-deps
       - name: Build Storybook
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: yarn build-storybook --quiet
       - name: Serve Storybook and run tests
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
