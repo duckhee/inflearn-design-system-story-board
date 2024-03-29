@@ -8,6 +8,8 @@ jobs:
   accessibility-test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./inflearn-design-system-story-board
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,7 +28,7 @@ jobs:
         working-directory: inflearn-design-system-story-board
         run: yarn build-storybook --quiet
       - name: Serve Storybook and run tests
-        working-directory: inflearn-design-system-story-board
+        working-directory: ${{ env.working-directory }}
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
