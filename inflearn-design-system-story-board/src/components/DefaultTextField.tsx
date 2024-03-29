@@ -40,8 +40,10 @@ export const DefaultTextField: React.FC<DefaultTextFieldProps> = ({
         border-primary
         ${borderColor}
         `}>
-                <input id={id} className={`outline-none`} type={`text`} placeholder={placeholder} value={value}
-                       onChange={onChange}/>
+                <input
+                    data-testid={id}
+                    id={id} className={`outline-none`} type={`text`} placeholder={placeholder} value={value}
+                    onChange={onChange}/>
                 {!!value && <IconButton onClick={onIconClick} alt={iconAlt} iconPath={iconPath}/>}
             </div>
             {/*CLS 를 줄이는 것이 사용자에게 좋은 경험을 주고 SEO 에 더 좋은 효과가 있다. */}
