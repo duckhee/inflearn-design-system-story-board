@@ -5,7 +5,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      working-directory: ./inflearn-design-system-story-board
+      working-directory: ./inflearn-design-system-story-board/inflearn-design-system-story-board
     steps:
       - uses: actions/checkout@v3
         with:
