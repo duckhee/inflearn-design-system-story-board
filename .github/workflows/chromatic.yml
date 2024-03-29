@@ -26,7 +26,7 @@ jobs:
             "npx http-server storybook-static --port 6006 --silent" \
             "npx wait-on tcp:6006 && yarn test-storybook"
   chromatic:
-    needs: test # 의존성 주입
+    needs: accessibility-test # 의존성 주입
     runs-on: ubuntu-latest
     env:
       working-directory: ./inflearn-design-system-story-board
