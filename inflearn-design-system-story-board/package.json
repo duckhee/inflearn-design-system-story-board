@@ -1,8 +1,17 @@
 {
   "name": "design-system-inflearn",
+  "description": "StoryBook study",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "src/components",
+    "index.css"
+  ],
+  "main": "src/components/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
